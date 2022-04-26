@@ -158,7 +158,6 @@ public class schedule extends AppCompatActivity {
                 new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hour, int min) {
-
                         if(hour<vendOpen||hour>vendClose) //checks if time selected is within business hours
                         {
                             Toast.makeText(schedule.this, "Vendor will be closed, select a different time", Toast.LENGTH_LONG).show();
