@@ -64,7 +64,7 @@ public class vendorProf extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
-                    vendorName =dataSnapshot.child(vendUID).child("companyName").getValue().toString();
+                    vendorName=dataSnapshot.child(vendUID).child("companyName").getValue().toString();
 
                     vendName.setText(vendorName);
                     vendAddr.setText("Address: "+dataSnapshot.child(vendUID).child("address").getValue().toString());
@@ -114,6 +114,7 @@ public class vendorProf extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     fullName=snapshot.child(uid).child("fullName").getValue().toString();
+                    order.setUser(fullName);
                 }
             }
             @Override
@@ -123,7 +124,7 @@ public class vendorProf extends AppCompatActivity {
         });
 
         order.setUserUID(uid);
-        order.setUser(fullName);
+
         order.setVendorName(vendorName);
         order.setVendUID(vendUID);
         order.setStatus(0);
@@ -164,8 +165,6 @@ public class vendorProf extends AppCompatActivity {
                     float tempPrice=(float)data.getFloatExtra("payAmount",0f);
                     String priceStr;
                     priceStr=dfZero.format(tempPrice);
-
-                    //input useruid and vendoruid into class
 
                     vendOrders.setText(priceStr);
                     order.setPrice(Float.parseFloat(priceStr));
