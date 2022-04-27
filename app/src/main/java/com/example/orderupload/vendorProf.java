@@ -168,8 +168,6 @@ public class vendorProf extends AppCompatActivity {
                     float tempPrice=(float)data.getFloatExtra("payAmount",0f);
                     String priceStr;
                     priceStr=dfZero.format(tempPrice);
-
-                    vendOrders.setText(priceStr);
                     order.setPrice(Float.parseFloat(priceStr));
 
                     uploadOrder();

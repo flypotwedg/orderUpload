@@ -56,7 +56,6 @@ public class schedule extends AppCompatActivity {
 
     String address;
 
-    //Intent data=getIntent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
