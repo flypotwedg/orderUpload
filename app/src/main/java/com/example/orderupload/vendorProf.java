@@ -36,6 +36,9 @@ public class vendorProf extends AppCompatActivity {
 
     String vendorName;
 
+    //add new field to order class for review and rating
+    //figure out why username not being uploaded
+
     order order=new order();
 
     DatabaseReference database=FirebaseDatabase.getInstance().getReference();
